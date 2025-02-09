@@ -30,7 +30,7 @@ class Broadcast(BASE):
         self.user_name = user_name
 
 
-Broadcast.__table__.create(checkfirst=True)
+Broadcast.__table__.create(bind=BASE.metadata.bind, checkfirst=True)
 
 
 #  Add user details -
